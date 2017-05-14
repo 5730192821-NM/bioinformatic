@@ -1,0 +1,56 @@
+Disease: Breast Cancer
+DiseaseID: OMIM:158320
+HP:0000006
+HP:0003002
+HP:0001425
+
+Disease: Pancreatic Cancer
+DiseaseID: OMIM:260350
+HP:0001428
+HP:0000006
+HP:0002894
+
+Disease: Bladder Cancer
+DiseaseID: OMIM:109800
+HP:0000006
+HP:0006740
+
+Disease: Cervical Cancer
+DiseaseID: OMIM:603956
+HP:0003319
+HP:0002664
+
+Disease: Ovarian Cancerovarian Cancer
+DiseaseID: OMIM:167000
+HP:0000006
+HP:0100621
+HP:0003002
+HP:0006774
+HP:0001939
+
+Disease: Lung Small Cell Cancer
+DiseaseID: OMIM:182280
+HP:0000006
+HP:0100526
+
+Disease: Prostate Cancer
+DiseaseID: OMIM:176807
+HP:0000006
+HP:0012125
+
+Disease: Ureter Cancer
+DiseaseID: OMIM:191600
+HP:0000006
+HP:0100516
+
+Disease: Endometrial Cancer
+DiseaseID: OMIM:608089
+HP:0012114
+
+Disease: Colorectal Cancer
+DiseaseID: OMIM:114500
+HP:0006716
+HP:0002891
+HP:0006753
+HP:0006740
+HP:0005584
