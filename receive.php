@@ -59,14 +59,14 @@
     }
 	$co = 0;
 	//print_r($HPOinD);
-	foreach($HPOinD as $obj)
+	/*foreach($HPOinD as $obj)
 	{
 		echo $ds[$co]."<br>";
 		$co++;
 		foreach ( $obj as $hp )
 			echo $hp .", ";
 		echo "<br>";
-	}
+	}*/
 	// $M is similarity matrix
 	$M = array();
 	foreach ( $HPOinD as $dis )
@@ -81,19 +81,94 @@
 		}
 		array_push($M,$temp);
 	}
-	for ( $i=0 ; $i<count($ds) ; $i++ )
+	/*for ( $i=0 ; $i<count($ds) ; $i++ )
 	{
 		for ( $j=0 ; $j<count($ds) ; $j++ )
 		{
 			echo $M[$i][$j]."&nbsp;";
 		}
 		echo "<br>";
-	}
+	}*/
 	$_SESSION['matrix'] = $M;
 ?>
 
 <html>
+	<head>
+		<meta charset="utf-8">
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom CSS -->
+		<link href="css/pablerashow.css" , rel="stylesheet">
+
+		<!-- Custom Fonts -->
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
 	<body>
+		<div id ="numbertable">
+			<table class="container">
+			<thead>
+				<tr>
+				<?php
+					echo "<th></th>";
+					foreach ($ds as $dis)
+					{
+						echo "<th><h1>".$dis."</h1></th>";
+					}
+				?>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+					for( $i=0 ; $i<count($ds) ; $i++ )
+					{
+						echo "<tr>";
+						echo "<td>".$ds[$i]."</td>";
+						foreach ( $M[$i] as $number )
+						{
+							echo "<td style ='width: 70px;'>".number_format($number, 4, '.', '')."</td>";
+						}
+					}
+				?>
+			</tbody>
+			</table>
+		</div>
+		<div id ="colortable">
+			<table class="container" style ="border-width: 0px;">
+			<thead>
+				<tr>
+				<?php
+					echo "<th></th>";
+					foreach ($ds as $dis)
+					{
+						echo "<th><h1>".$dis."</h1></th>";
+					}
+				?>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+					for( $i=0 ; $i<count($ds) ; $i++ )
+					{
+						echo "<tr>";
+						echo "<td>".$ds[$i]."</td>";
+						foreach ( $M[$i] as $number )
+						{
+							$color = (int)255 * $number;
+							$red = dechex(255-$color);
+							if (strlen($red) < 2 )	$red = '0'.$red;
+							$green = dechex($color);
+							if (strlen($green) < 2 )	$green = '0'.$red;
+							$col = $red.$green."00";
+							
+							echo "<td style ='background-color:".$col."; width: 70px;'></td>";
+						}
+					}
+				?>
+			</tbody>
+			</table>
+		</div>
 		<a href="fileCreator.php" target="download_frame">Download a matrix here </a>
 		<iframe id="download_frame" style="display:none;"></iframe>
 	</body>
