@@ -22,7 +22,7 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-		
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,39 +33,31 @@
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>MenuBar</a>
-            </li>
-            <li>
-                <a href="#top" onclick=$("#menu-close").click();>Home</a>
-            </li>
-        </ul>
-    </nav>
-
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Similarity matrix base on disease HPO</h1>
-            <h3>Please upload the input file</h3>
+          <div style="border: 5px solid white;
+          margin-left:20%;
+          margin-right:20%;
+          padding-top:5%;
+          padding-bottom:5%
+          ">
+            <h1 style="font-size:70px; color:white; text-shadow:-2px 0 black, 0 2px black, 2px 0 black,0 -2px black;">Similarity matrix base on disease HPO</h1>
+            <h3 style="font-size:35px; color:white; text-shadow:-1px 0 black, 0 1px black, 1px 0 black,0 -1px black;">Please upload the input file</h3>
             <br>
-			
+
 			<form action="receive.php" method="post" enctype="multipart/form-data">
-			
+
 				<center><input type="file" name="file" id="file-1" class="btn btn-dark btn-lg">
 				<br>
-				<input type="submit" value="Submit" name="submit" class="btn btn-dark btn-lg">
+				<input type="submit" value="Submit" name="submit" class="btn btn-dark btn-lg" style="width: 10%; font-size:20px;">
 			</form>
+    </div>
         </div>
-		
+
     </header>
 
-	
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
