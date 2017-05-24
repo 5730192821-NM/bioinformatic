@@ -7,14 +7,23 @@
 - Input file is .txt
 - The input file format is 
 -
-- Disease: Breast Cancer
-- DiseaseID: OMIM:158320
-- HP:0000006
-- HP:0003002
-- HP:0001425
--
-- Disease: Pancreatic Cancer
-- DiseaseID: OMIM:260350
-- HP:0001428
-- HP:0000006
-- HP:0002894
+
+    Disease: Breast Cancer
+
+    DiseaseID: OMIM:158320
+    
+    HP:0000006
+    
+    HP:0003002
+    
+    HP:0001425
+ 
+    Disease: Pancreatic Cancer
+    
+    DiseaseID: OMIM:260350
+    
+    HP:0001428
+    
+    HP:0000006
+    
+    HP:0002894
