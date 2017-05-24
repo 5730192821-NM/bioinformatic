@@ -2,6 +2,7 @@
 - Part of Bioinformatics 1 (2110495) Term Project
 ## Manual
 - First of all, you need to install xampp application to create a local host. After that clone this file to your xampp directory and inside htdocs folder ex. "C:\xampp\htdocs\bioinformatic-master". Then you need to run xampp control panel. Click start Apache to start a local host. After you click start you can access the website by opened your browser. Type at the address panel "localhost/[your-folder]" ex. "localhost/bioinformatic-master". Finished.
+- link to download xampp application : https://www.apachefriends.org/download.html
 ## Type of input
 - Input file is .txt
 - The input file format is 
